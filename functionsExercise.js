@@ -65,10 +65,10 @@ const newMuppetMovies=[
 ];
 
 newMuppetMovies.map(function() {
-    const uppermovies=newMuppetsMovies.toUppercase();
-    return uppermovies;
-});
-console.log(upperMovies);
+    const uppers = newMuppetMovies.map(function(x){
+        return x.toUpperCase()
+    });
+    console.log(uppers);
 
 const oldMuppetMovies=[
     "The Muppet Movie",
@@ -98,32 +98,44 @@ randomMuppet=(characters)=>{
 }
 
 randomMuppet(charactersOne);
-randomMuppet(characterstwo);
+randomMuppet(charactersTwo);
 
-caps=(string)=>{
-    let newString=``;
-    for(i=0; i<string.length; i++)
-        if(i%2===0){
-            newString+=string[i].toUpperCase();        
-    }else{
-        newString+=string[i].toLowerCase();
+
+caps = (string) => {
+    let newString = ``;
+    for (i = 0; i < string.length; i++){
+        if (i % 2 === 0){
+            newString += string[i].toUpperCase()
+        }else {
+            newString += string[i].toLowerCase()
+        }
     }
-    returnnewString;
+    return newString;
 }
+
 console.log(caps(`Hello World`));
 
-caps=(string)=>{
-    let newString=``;
-    for(i=0; i<string.length; i++)
-        if(string[i]===``){
-            newString+=``;
-        }else if(count%2===0){
-            newString+=string[i].toUppercase();
-            count++;
-        }else{
-            newString+=string[i].toLowerCase();
-            count++;
-        }
-        }
-
         console.log(caps(`Hello World`));
+
+
+        // // Extra Bonus
+
+//  caps = (string) => {
+//     let count = 0;
+//     let newString = ``;
+//     for (i = 0; i < string.length; i++){
+//         if (string[i] ===` `){
+//             newString += ` `;
+//         }else if (count % 2 === 0){
+//             newString += string[i].toUpperCase();
+//             count++;
+//         }else{
+//             newString += string[i].toLowerCase()
+//             count++
+//         }
+//     }
+// return newString;
+// }
+
+
+// console.log(caps(`Hello World`));
